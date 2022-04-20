@@ -33,4 +33,7 @@ clearSearch(): void {
   this.searchString = "";
   this.laptops = this.laptopservice.getlaptops();
 }
+deleteLaptop(givenlaptop: laptop): void{
+  this.laptops = this.laptopservice.deleteLaptop(givenlaptop);
+}
 }
