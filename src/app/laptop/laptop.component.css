@@ -1,0 +1,13 @@
+tbody{
+display:flex;
+justify-content: space-around;
+flex-wrap: wrap;
+border: 1px 1px 1px 1px ;
+border-top: 2px;
+/* flex-direction: column; */
+}
+img{
+    height: 200px;
+    width: min-content;
+ 
+}

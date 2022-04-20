@@ -1,0 +1,49 @@
+
+
+<div class="container">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    
+    <div class="mt-2 container">
+      <div class="row">
+        <div class="col-md-4">
+          
+        </div>
+        <div class="col-md-7">
+          <div class="input-group">
+            <input type="text" class="form-control rounded mr-1" placeholder="Search" aria-label="Search" aria-describedby="search-addon" [(ngModel)]="searchString"/>
+            <span class="input-group-btn rounded"><button type="button" class="btn btn-outline-primary mr-1" (click)="searchBook()">search</button></span>
+            <span class="input-group-btn rounded"><button type="button" class="btn btn-outline-primary mr-1" (click)="clearSearch()">clear</button></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="mt-2 container">
+      <table class="table">
+        <thead>
+          <tr>
+            <!-- <th scope="col">Name</th>
+            <th scope="col">Ram</th>
+            <th scope="col">SSD</th>
+            <th scope="col">Price</th> -->
+          
+          </tr>
+        </thead>
+        <tbody style=" border: 1px 1px 1px 1px ;">
+          <tr  style="text-align: center;" *ngFor="let laptop of laptops; let i = index">
+            <div style="text-align: center;"><img  src="{{laptop.image}}">
+            
+            <div><td> {{laptop.name}}</td></div>
+            <td>{{laptop.ram}}</td>
+            <td>{{laptop.ssd}}</td>
+            <td>{{laptop.price}}</td>
+            <button  type="button" class="btn btn-primary fa-solid fa-cart-shopping">Buy Now</button>
+            
+            
+             </div>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
