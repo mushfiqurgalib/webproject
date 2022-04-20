@@ -5,5 +5,6 @@ export class laptop {
     ssd:string="";
     price:string="";
     image:string='';
+    display:string='';
 
 }

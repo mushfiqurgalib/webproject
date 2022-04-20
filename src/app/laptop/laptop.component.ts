@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { laptop } from '../laptop';
 import { LaptopService } from '../laptop.service';
 
@@ -9,7 +10,7 @@ import { LaptopService } from '../laptop.service';
 })
 export class LaptopComponent implements OnInit {
 
-  constructor(private laptopservice:LaptopService) { }
+  constructor(private laptopservice:LaptopService,private router:Router) { }
   searchString:string = ""; 
   laptops: laptop[] = [];
 
@@ -26,7 +27,7 @@ export class LaptopComponent implements OnInit {
       
       this.laptops = this.laptops.filter(laptop => laptop.name.slice(0,this.letternum).toLowerCase() == this.searchString.slice(0,this.letternum).toLowerCase());
       if(this.laptops.length==0) {
-        alert("No book found");
+        alert("No laptop found");
       }
 }}
 clearSearch(): void {
@@ -35,5 +36,13 @@ clearSearch(): void {
 }
 deleteLaptop(givenlaptop: laptop): void{
   this.laptops = this.laptopservice.deleteLaptop(givenlaptop);
+}
+addlaptop(): void {
+  this.router.navigate(['add']);
+}
+viewlaptop(laptop: laptop){
+  console.log(laptop);
+  this.laptopservice.setViewLaptop(laptop);
+  this.router.navigate(['view']);
 }
 }
