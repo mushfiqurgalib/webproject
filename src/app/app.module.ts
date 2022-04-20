@@ -5,8 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LaptopComponent } from './laptop/laptop.component';
-import { LoginComponent } from './login/login.component';
-import { SignUpformComponent } from './sign-upform/sign-upform.component';
+
 import { AddlaptopComponent } from './addlaptop/addlaptop.component';
 import { DetailComponent } from './detail/detail.component';
 
@@ -14,8 +13,6 @@ import { DetailComponent } from './detail/detail.component';
   declarations: [
     AppComponent,
     LaptopComponent,
-    LoginComponent,
-    SignUpformComponent,
     AddlaptopComponent,
     DetailComponent
   ],
